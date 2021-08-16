@@ -9,4 +9,7 @@ router.get('/',user_controller.profile);
 
 router.get('/posts', posts_controller.posts);
 
+router.get('/profile', user_controller.profile);
+
+
 module.exports = router;
