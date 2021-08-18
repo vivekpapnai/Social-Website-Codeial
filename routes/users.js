@@ -10,17 +10,20 @@ const posts_controller = require('../controllers/posts_controllers');
 
 router.get('/posts', posts_controller.posts);
 
-router.get('/profile', user_controller.profile);
+router.get('/profile', passport.checkAuthentication,user_controller.profile);
 
-router.get('/sign-up', users_controller.signUp);
+router.get('/sign-up', user_controller.signUp);
 
-router.get('/sign-in', users_controller.signIn);
+router.get('/sign-in', user_controller.signIn);
 
 router.post('/create', user_controller.create);
 
+// router.post('/create-session', user_controller.createSession);
+
+// router.get('/remove-session', user_controller.removeSession);
 
 //  use passport as a middleware to autheticate
-router.post('/create-session',passport.autheticate(
+router.post('/create-session',passport.authenticate(
     'local',
     {failureRedirect : '/users/sign-in'},
 ) ,user_controller.createSession);
