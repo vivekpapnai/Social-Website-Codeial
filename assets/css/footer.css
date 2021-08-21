@@ -1,0 +1,21 @@
+footer {
+  background-color: grey;
+  height: 80px;
+  color: white;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-link ul {
+  list-style-type: none;
+}
+
+.nav-link ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link ul li a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}

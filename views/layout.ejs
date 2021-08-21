@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!-- include style from subpage -->
     <%- style %>
   </head>
@@ -13,9 +15,10 @@
     <!-- include header -->
     <%- include('_header'); -%>
     
-    <!-- include body subparts -->
-    <%- body %>
-
+    <main id="layout-main">
+    <!-- include body main parts -->
+      <%- body %>
+    </main>
     <!-- include footer -->
     <%- include('_footer'); -%>
 

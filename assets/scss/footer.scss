@@ -1,0 +1,24 @@
+$primary-color: grey;
+$primary-font: Arial, Helvetica, sans-serif;
+
+footer{
+    background-color: $primary-color;
+    height: 80px;
+    color: white;
+    display: flex;
+    font-family: $primary-font;
+}
+
+.nav-link{
+    ul{
+        list-style-type: none;
+        li{
+            display: flex;
+            justify-content: space-between;
+            a{
+                color: white;
+                font-family: $primary-font;
+            }
+        }
+    }
+}
