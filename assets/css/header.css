@@ -30,6 +30,7 @@ header .logo a {
 }
 
 .navbar ul li a {
+  font-size: large;
   color: white;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
