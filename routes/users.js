@@ -10,7 +10,9 @@ const posts_controller = require('../controllers/posts_controllers');
 
 router.get('/posts', posts_controller.posts);
 
-router.get('/profile', passport.checkAuthentication,user_controller.profile);
+router.get('/profile/:id', passport.checkAuthentication,user_controller.profile);
+router.post('/update/:id', passport.checkAuthentication,user_controller.update);
+
 
 router.get('/sign-up', user_controller.signUp);
 
